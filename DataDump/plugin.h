@@ -10,3 +10,8 @@
 bool pluginInit(PLUG_INITSTRUCT* initStruct);
 void pluginStop();
 void pluginSetup();
+PLUG_EXPORT void callback(CBTYPE cbType, void* callbackInfo);
+DWORD GetDataSectionRVA(duint vaFirstSectionHeader, duint nSections);
+WORD ReadWord(duint VA);
+DWORD ReadDword(duint VA);
+bool isWritable(duint vaSectionHeader);
